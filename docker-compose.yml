@@ -1,0 +1,46 @@
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: laravel_app
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "9000:9000"
+    networks:
+      - laravel
+
+  webserver:
+    image: nginx:alpine
+    container_name: laravel_nginx
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/app.conf
+    ports:
+      - "8080:80"
+    networks:
+      - laravel
+
+  database: 
+    image: mysql:5.7
+    container_name: laravel_mysql
+    restart: always
+    ports: 
+      - "9906:3306"
+    environment:
+      MYSQL_DATABASE: dev_topcv
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'     # Cho phép mật khẩu trống
+    volumes:
+      - dbdata:/var/lib/mysql               # Để lưu trữ dữ liệu MySQL
+      - ./dev_topcv.sql:/home/dev_topcv.sql # Để ánh xạ file SQL vào trong container
+    networks:
+      - laravel
+
+networks:
+  laravel:
+
+volumes:
+  dbdata:
