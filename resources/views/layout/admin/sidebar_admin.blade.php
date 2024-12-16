@@ -19,7 +19,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.index.view') }}">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -36,18 +36,11 @@
             <span>Trang chủ</span></a>
     </li>
     
-    <!-- Divider -->
-    <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Quản Lý Danh Mục</span></a>
-    </li>
-    
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="{{route('management.post')}}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Quản lý bài viết</span></a>
+            <span>Quản lý bài tuyển dụng</span></a>
     </li>
     
     <li class="nav-item">

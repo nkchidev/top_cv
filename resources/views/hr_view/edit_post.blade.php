@@ -288,7 +288,7 @@
             $('#select-district').select2({
                 tags: true,
             });
-             //const response = await fetch('{{asset('locations/test.json')}}');
+
             const response = await fetch('{{asset('locations/index.json')}}');
             const cities = await response.json();
             $.each(cities, function (index, each){

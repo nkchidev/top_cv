@@ -26,22 +26,20 @@
                <div class="top-header-right">
                    <ul class="list-info">
                        <li class="number_phone">
-                           <a href="#"><i class="fa-solid fa-phone"></i> 0395004764</a>
+                           <a href="#"><i class="fa-solid fa-phone"></i> 0336293669</a>
                            <p class="space">|</p>
                        </li>
-                       <li class="post_text">
+                       {{-- <li class="post_text">
                            <a href="#">
                                <i class="fa-solid fa-feather"></i> Đăng tin
                            </a> 
                            <p class="space">|</p>
-                               
                        </li>
                        <li class="contact">
                            <a href="#">
-    
                                <i class="fa-solid fa-address-book"></i> Liên hệ
                            </a>
-                       </li>
+                       </li> --}}
                    </ul>
                </div>
            </div>
@@ -57,20 +55,11 @@
                                        <i class="fa-solid fa-bars"></i>
                                    </a>
                                </li>
-                               <li class="menu">
-                                   <a href="#">Việc làm IT</a>
-                               </li>
-                               <li class="menu">
+                               {{-- <li class="menu">
                                    <a href="{{route('applicantView')}}">Tạo CV</a>
-                               </li>
+                               </li> --}}
                                <li class="menu">
                                    <a href="{{route('list.companies')}}">Công Ty IT</a>
-                               </li>
-                               <li class="menu">
-                                   <a href="#">Blog IT</a>
-                               </li>
-                               <li class="menu">
-                                   <a href="#">Liên hệ</a>
                                </li>
                            </ul>
                        </div>
@@ -84,11 +73,7 @@
                                <li class="menu">
                                     <a href="#" onclick="show_choice_role_form()" class="signin-button">Đăng ký</a>
                                </li>
-                               <li class="menu">
-                                   <a href="" class="post-button">Đăng Tuyển & Tìm Hồ Sơ</a>
-                               </li>
                            </ul>
-    
                        </div>
                    </div>
 

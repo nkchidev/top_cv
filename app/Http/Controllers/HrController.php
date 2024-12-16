@@ -165,15 +165,21 @@ class HrController extends Controller
     public function list_applicants_accepted(){
         $company = companies::where('hr_id',session()->get('id_hr'))->first();
         $list_applicants_accepted = apply_cv::query()
-        ->join('posts','posts.id','=','apply_cvs.post_id')
-        ->join('applicants','applicants.id','=','apply_cvs.applicant_id')
-        ->join('companies','companies.id','=','posts.company_id')
-        ->where('companies.id',$company->id)
-        ->where('apply_cvs.status',1)
-        ->select('applicants.*','apply_cvs.file_cv as file_cv','apply_cvs.status as status','apply_cvs.type_cv as type_cv')
-        ->orderBy('apply_cvs.created_at','desc')
-        ->DISTINCT('applicants.id')
-        ->paginate(10);
+            ->join('posts','posts.id','=','apply_cvs.post_id')
+            ->join('applicants','applicants.id','=','apply_cvs.applicant_id')
+            ->join('companies','companies.id','=','posts.company_id')
+            ->where('companies.id',$company->id)
+            ->where('apply_cvs.status',1)
+            ->select(
+                'applicants.*',
+                'apply_cvs.file_cv as file_cv',
+                'apply_cvs.status as status',
+                'apply_cvs.type_cv as type_cv',
+                'apply_cvs.created_at' 
+            )
+            ->orderBy('apply_cvs.created_at','desc')
+            ->distinct('applicants.id')
+            ->paginate(10);
         foreach($list_applicants_accepted as $applicant){
             $applicant->created_at = Carbon::parse($applicant->created_at)->format('d-m-Y');
         }

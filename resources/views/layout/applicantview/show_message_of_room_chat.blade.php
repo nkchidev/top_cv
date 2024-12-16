@@ -8,7 +8,7 @@
 	var pusher = new Pusher('f159bf8e622a9a565b4f', {
 		cluster: 'ap1',
 		encrypted: true,
-		authEndpoint: 'https://top-cv.code/broadcasting/auth',
+		authEndpoint: 'http://localhost:8080/broadcasting/auth',
 		auth: {
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')

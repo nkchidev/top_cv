@@ -55,9 +55,10 @@
                    $('#choice_city').append(`
                    <option value='${index}' data-path='${each.file_path}'>${index}</option>
                    `);
-   
             })
+
             $('#search_header').on('click',function(){
+                
                 $('#search_results').css('display','block');
                 let search_by_language = $('#search_by_language').val();
                 let search_by_positions = $('#search_by_positions').val();

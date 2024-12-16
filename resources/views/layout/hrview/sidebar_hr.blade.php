@@ -6,7 +6,7 @@
                 <div class="hr_infor_basic">
                     <span class="hr_name">{{ session('hr_name') }}</span>
                     <p>Employer</p>
-                    <p>Level account: <span>Cấp 1/5</span></p>
+                    {{-- <p>Level account: <span>Cấp 1/5</span></p> --}}
                 </div>
             </div>
         @endif

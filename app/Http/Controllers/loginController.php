@@ -15,7 +15,7 @@ class loginController extends Controller
         $check_login_applicant = applicant::where('email',$email)->where('password',$password)->first();
         if($applicant){
             session()->put('success_login_applicant','success_login_applicant');
-            session()->put('id_aplicant',$check_login_applicant->id);
+            session()->put('id_applicant',$check_login_applicant->id);
             session()->put('applicant_name',$check_login_applicant->name);
             session()->put('avatar',$check_login_applicant->avatar);
             return redirect()->route('home');

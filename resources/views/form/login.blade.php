@@ -42,11 +42,10 @@
                         <a href="{{ route('home') }}">
                             <img src="{{asset('image/Logo_TopCV_no_slogan.png')}}" alt="">
                         </a>
-                        
                     </div>
                     <h6>Chào mừng bạn trở lại với TopCV</h6>
                     <span class="sign_up_intro">Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý tưởng</span>
-                    <form action="{{route('check.login')}}" method="post">
+                    <form action="{{ route('check.login') }}" method="post">
                         @csrf
                         <div class="form">
                             <div class="input">
@@ -97,34 +96,26 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-               
                                 <div class="banner_singup">
                                     <img src="{{asset('image/86abff643f29067301dd713716101cdd-6385bcbe4a011.jpg')}}" alt="" class="img_hot_company">
                                     <h5>Công cụ viết CV đẹp Miễn phí</h5>
                                     <p>Nhiều mẫu CV đẹp, phù hợp nhu cầu ứng tuyển các vị trí khác nhau. Dễ dàng chỉnh sửa thông tin, tạo CV online nhanh chóng trong vòng 5 phút.</p>
-                
                                 </div>
                           </div>
                           <div class="carousel-item">
-                     
                                 <div class="banner_singup">
                                     <img src="{{asset('image/86abff643f29067301dd713716101cdd-6385bcbe7f2ae.jpg')}}" alt="" class="img_hot_company">
                                     <h5>Công cụ viết CV đẹp Miễn phí</h5>
                                     <p>Nhiều mẫu CV đẹp, phù hợp nhu cầu ứng tuyển các vị trí khác nhau. Dễ dàng chỉnh sửa thông tin, tạo CV online nhanh chóng trong vòng 5 phút.</p>
                                 </div>
-
-            
                           </div>
                           <div class="carousel-item">
-                    
                                 <div class="banner_singup">
                                     <img src="{{asset('image/86abff643f29067301dd713716101cdd-6385bcbe9d214.jpg')}}" alt="" class="img_hot_company">
                                     <h5>Công cụ viết CV đẹp Miễn phí</h5>
                                     <p>Nhiều mẫu CV đẹp, phù hợp nhu cầu ứng tuyển các vị trí khác nhau. Dễ dàng chỉnh sửa thông tin, tạo CV online nhanh chóng trong vòng 5 phút.</p>
                                 </div>
-             
                           </div>
-                          
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -135,7 +126,6 @@
                             <span class="sr-only">Next</span>
                           </a>
                       </div>
-                    
                 </div>
             </div>
         </div>

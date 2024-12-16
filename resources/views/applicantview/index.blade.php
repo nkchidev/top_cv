@@ -324,38 +324,6 @@
             </div>
         </div>
     </div>
-    <div id="footer">
-        <div class="location-ahead-company">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="text-about-company">
-                            <span>© 2014 - 2022 <b>Công ty cổ phần TopCV Việt Nam</b></span>
-                            <br>
-                            <span>
-                                <b>Trụ sở HN:</b><br>
-                                Tầng 3, 4 tòa FS - GoldSeason số 47 Nguyễn Tuân, Thanh Xuân Trung, Thanh Xuân, Hà Nội
-                                <br>
-                                Trụ sở HCM: <br>
-                            </span>
-                            <br>
-                            <span>
-                                <b>Chi nhánh TP HCM:</b><br>
-                                Tầng 12, Tòa nhà Dali, 24C Phan Đăng Lưu, Phường 6, Quận Bình Thạnh, TP Hồ Chí Minh
-                            </span>
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="img-logo-company">
-                            <img src="../assets/image/Logo_TopCV_no_slogan.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){

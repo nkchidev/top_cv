@@ -33,12 +33,12 @@ return [
     'github' => [
         'client_id' => '42fc548ce1de3cca6a8e',
         'client_secret' => 'b81645e7b6af055ecc082b2a65e1e98356fc50f2',
-        'redirect'  =>'https://top-cv.code/auth/callback/github',
+        'redirect'  => env('APP_URL') . '/auth/callback/github',
     ],
     'facebook' => [
         'client_id' => '875034967496382',
         'client_secret' => '6947bde561ba68c6088baa87d471af56',
-        'redirect'  =>'https://top-cv.code/auth/callback/facebook',
+        'redirect'  => env('APP_URL') . '/auth/callback/facebook',
     ],
 
 ];

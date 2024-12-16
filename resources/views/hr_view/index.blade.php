@@ -130,9 +130,9 @@
                                                     Nâng cấp tài khoản
                                                 </button>
                                             </a>
-                                            <button class="more_infor">
+                                            {{-- <button class="more_infor">
                                                 Tìm hiểu thêm
-                                            </button>
+                                            </button> --}}
                                         </div>
                                     </div>
                                 </div>

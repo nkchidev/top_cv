@@ -75,8 +75,7 @@
                                 <div class="post_info">
                                    <div class="row">
                                         <div class="col-md-6">
-                                            <label for="" style="margin-bottom:10px">Vị trí tuyển dụng(*)</label>
-                                                <br>
+                                            <label for="" style="margin-bottom:10px">Vị trí tuyển dụng(*)</label><br>
                                             <select class="form-control" multiple="multiple" id="select-position-apply" name="position[]" required="required">
                                                 <option value="intern">intern</option>
                                                 <option value="fresher">fresher</option>
@@ -205,7 +204,7 @@
         $(document).ready(async function(){
             async function loadDistrict(){
                 const city = $("#select-city option:selected").data('path');
-                const response = await fetch('{{asset('locations/')}}' + city);
+                const response = await fetch('{{asset('locations')}}' + city);
                 const districts = await response.json();
                 $.each(districts.district, function (index,each){
                      $('#select-district').append(`
@@ -215,7 +214,7 @@
             };
             async function loadCity(){
                 const countries = $("#select-city option:selected").val();
-                const response = await fetch('{{asset('locations/test.json')}}');
+                const response = await fetch('{{asset('locations/index.json')}}');
                 const districts = await response.json();
                 $.each(districts, function (index,each){
                     if(index == countries){
@@ -273,26 +272,23 @@
             $('#select-district').select2({
                 tags: true,
             });
-             //const response = await fetch('{{asset('locations/test.json')}}');
+
             const response = await fetch('{{asset('locations/index.json')}}');
             const cities = await response.json();
             $.each(cities, function (index, each){
-                
+                                
                 $('#select-city').append(`
                 <option value='${index}' data-path='${each.file_path}'>${index}</option>
                 `);
                 // $('#select-city').append(`
                 // <option value='${index}'>${index}</option>
                 // `);
-
             })
 
-            //loadCity()
             loadDistrict();
             $('#select-city').change(function(){
                 $('#select-district').empty();
                  loadDistrict();
-                //loadCity();
             })
             $("#select-company,#select-languages,#select-position-apply,#select-experience").select2({
             tags: true

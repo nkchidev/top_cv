@@ -4,6 +4,14 @@ body{
 html{
     overflow-x: hidden;
 }
+.main_hr_view{
+    height: calc(100vh - 95px);
+}
+
+.main_hr_view > .row{
+    height: 100%;
+}
+
 #header_hr_view{
     background-color: #212f3f!important;
     align-items: center;
@@ -99,6 +107,7 @@ html{
     padding: 20px;
     margin-left: -24px;
     background-color: #f1f2f6;
+    height: 100%;
 }
 .compete_text{
     padding: 15px;

@@ -779,6 +779,7 @@ p span{
     font-weight: normal;
     background-color: #f2fbf6;
     border-radius: 5px;
+    overflow: hidden;
 }
 .link div{
     padding: 10px;

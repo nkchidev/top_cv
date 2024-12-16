@@ -55,8 +55,8 @@ class ServicesController extends Controller
         $orderInfo = "Thanh toán qua MoMo";
         $amount = $service->price;
         $orderId = time() . "";
-        $redirectUrl = "https://top-cv.code/index/hr";
-        $ipnUrl = "https://top-cv.code/index/hr";
+        $redirectUrl = route('hr.index');
+        $ipnUrl =  route('hr.index');
         $extraData = "";
 
         $requestId = time() . "";

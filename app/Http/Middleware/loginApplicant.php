@@ -16,7 +16,7 @@ class loginApplicant
      */
     public function handle(Request $request, Closure $next)
     {
-        if(EMPTY(session()->has('id_applicant'))){
+        if(! session()->has('id_applicant')){
 
             return redirect()->route('login');
         }

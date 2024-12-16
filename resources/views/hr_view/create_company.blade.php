@@ -26,17 +26,17 @@
                     <div class="main_setting">
                         <div class="main_setting_account">
                             <div class="row">
-                                <div class="col-md-2">
+                                {{-- <div class="col-md-2">
                                     <div class="list_setting">
                                         <ul>
                                             <li> <a href="#" class="icon_link"><i class="fa-regular fa-user"></i>Thông tin cá nhân</a></li>
                                             <li>  <a href="#" class="icon_link"><i class="fa-regular fa-user"></i>Thông tin công ty</a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="col-md-10">
+                                </div> --}}
+                                <div class="col-md-12">
                                     <div class="setting-account">
-                                        <h5 class="company-text">Cập nhật thông tin công ty</h5>
+                                        <h5 class="company-text" style="padding-left: 12px">Cập nhật thông tin công ty</h5>
                                         <div class="infor-company">
                                             <form action="{{route('store.company')}}" method="post" enctype="multipart/form-data">
                                                 @csrf
