@@ -40,7 +40,7 @@ return [
             'port' => 587,
             'encryption' => 'tls',
             'username' => 'nguyenkimchi10112003@gmail.com',
-            'password' => 'zmbneutuyejvuovq',
+            'password' => 'tslnxkqftylcrnst',
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],

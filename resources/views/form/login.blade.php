@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-6">
                 @if(session('success'))
-                    <div class="alert alert-danger text-center" style="margin-left:50px;margin-top:20px">
+                    <div class="alert alert-success text-center" style="margin-left:50px;margin-top:20px">
                         {{session('success')}}
                     </div>
                 @endif

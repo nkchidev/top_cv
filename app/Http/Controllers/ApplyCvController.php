@@ -48,7 +48,7 @@ class ApplyCvController extends Controller
             $apply_cv->save();
             $message = "Bạn có 1 cv mới từ ".$apply_cv->applicant->name;
             $send_to = "hr";
-            event(new AppliCantSendCv($message,$hr_id));
+            // event(new AppliCantSendCv($message,$hr_id));
             messages::create([
                 'apply_cvs_id' => $apply_cv->id,
                 'message' => $message,

@@ -44,7 +44,7 @@ class PostController extends Controller
                         ->select('posts.*','services.border_post as borderpost','services.hot_company as hot_company','companies.name as name','companies.logo as logo','companies.description_company as description_company','companies.number_of_employees as number_of_employees','companies.address as address','companies.id as company_id')
                         ->where('posts.id',$id)
                         ->first();
-        $detail_post->expired_post = Carbon::parse($detail_post->expired_post)->format('d-m-Y');
+        $detail_post->expired_post = $detail_post->expired_post ? Carbon::parse($detail_post->expired_post)->format('d-m-Y') : '';
         $review_company = Post::inRandomOrder()
                         ->join('companies','posts.company_id','=','companies.id')
                         ->select('posts.*','companies.name as company_name','companies.logo as company_logo')
