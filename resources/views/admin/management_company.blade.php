@@ -16,10 +16,8 @@
     <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/toasty.js"></script>
 </head>
 <body id="page-top">
-
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         @include('layout.admin.sidebar_admin')
         <!-- End of Sidebar -->
